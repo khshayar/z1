@@ -1,0 +1,41 @@
+//selection sort
+#include<iostream>
+using namespace std;
+#define n 10
+void get(int a[n])
+{
+	cout<<"enter your numbers : ";
+	for(int i=0;i<n;i++)
+		cin>>a[i];
+	
+}
+void print(int a[n])
+{
+	for(int i=0;i<n;i++)
+		cout<<a[i]<<" ";
+}
+void selection(int a[n])
+{
+	int change;
+	for(int i=0;i<n;i++){
+		for(int j=i+1;j<n;j++){
+			if(a[i]>a[j]){
+				change=a[i];
+				a[i]=a[j];
+				a[j]=change;
+			}
+			else 
+				continue;
+		}
+			}
+}
+main()
+{
+	int a[n];
+	get(a);
+	cout<<endl<<"your numbers "<<endl;
+	print(a);
+	selection(a);
+	cout<<endl;
+	print(a);
+}
